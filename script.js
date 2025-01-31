@@ -3,7 +3,7 @@ async function generatePIN() {
     let language = document.getElementById("language").value;
 
     if (!input) {
-        alert("Please enter a personal detail.");
+        alert("Please enter a word");
         return;
     }
 
@@ -44,9 +44,9 @@ function addStructuredData(input, language, data) {
     script.textContent = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "SecureScript PIN Generator",
-        "description": "Generate secure multilingual PINs from personal details",
-        "applicationCategory": "Security Tool",
+        "name": "matrapin",
+        "description": "Your Words, Your Security. MatraPin: Secure PINs from the Heart of Indian Languages.",
+        "applicationCategory": "PIN and Password Generator",
         "operatingSystem": "All",
         "offers": {
             "@type": "Offer",
