@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrapin</title>
+    <meta name="description" content="Generate secure PINs using Indian language scripts. Transform personal details into unique, language-based passwords for enhanced security.">
+    <meta name="keywords" content="secure PIN generator, Indian language PIN, multilingual password, language-based security, Odia PIN, Telugu PIN, Tamil PIN, Malayalam PIN">
+    <meta name="author" content="Rudra Prasad Sahu, Suraj Kumar Panigrahi">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SecureScript</h1>
+            <p class="tagline">Transform Personal Info into Secure PINs</p>
+        </div>
+        <div class="input-section">
+            <input type="text" id="wordInput" placeholder="Enter personal detail (e.g., last name, birth date)">
+            <select id="language">
+                <option value="none">Select Language</option>
+                <option value="odia">Odia</option>
+                <option value="telugu">Telugu</option>
+                <option value="tamil">Tamil</option>
+                <option value="malayalam">Malayalam</option>
+            </select>
+            <button onclick="generatePIN()" class="generate-btn">Generate Secure PIN</button>
+        </div>
+        <div id="results" class="hidden results-section">
+            <div class="result-card">
+                <h3>Your Secure PINs</h3>
+                <div class="pin-detail">
+                    <label>Transliterated:</label>
+                    <div class="copy-container">
+                        <span id="transliterated"></span>
+                        <button onclick="copyText('transliterated')" class="copy-btn">📋</button>
+                    </div>
+                </div>
+                <div class="pin-detail">
+                    <label>4-Digit PIN:</label>
+                    <div class="copy-container">
+                        <span id="pin4"></span>
+                        <button onclick="copyText('pin4')" class="copy-btn">📋</button>
+                    </div>
+                </div>
+                <div class="pin-detail">
+                    <label>6-Digit PIN:</label>
+                    <div class="copy-container">
+                        <span id="pin6"></span>
+                        <button onclick="copyText('pin6')" class="copy-btn">📋</button>
+                    </div>
+                </div>
+                <div class="pin-detail">
+                    <label>Alphanumeric PIN:</label>
+                    <div class="copy-container">
+                        <span id="alphaPin"></span>
+                        <button onclick="copyText('alphaPin')" class="copy-btn">📋</button>
+                    </div>
+                </div>
+            </div>
+            <button onclick="resetForm()" class="reset-btn">Generate Another PIN</button>
+        </div>
+        <div class="info-section">
+            <p>🔒 Your personal details are transformed into secure, multilingual PINs.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
