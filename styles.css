@@ -126,6 +126,16 @@ body {
     opacity: 0.7;
 }
 
+.info-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.info-section a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
 .hidden {
     display: none;
 }
@@ -152,4 +162,20 @@ body {
     font-family: 'MalayalamFont1';
     src: url('./fonts/malayalam1.ttf') format('truetype');
     font-display: swap;
+}
+
+.transliteration-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#transliterated {
+    display: block;
+    padding: 10px;
+    min-height: 40px;
 }

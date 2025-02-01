@@ -22,6 +22,7 @@ async function generatePIN() {
         let data = await response.json();
         document.getElementById("transliterated").textContent = data.transliterated_text;
         applyFont(language);
+        document.getElementById("transliteration-section").classList.remove("hidden");
 
         document.getElementById("pin4").textContent = data["4-digit PIN"];
         document.getElementById("pin6").textContent = data["6-digit PIN"];
@@ -83,6 +84,7 @@ function resetForm() {
     document.getElementById("wordInput").value = "";
     document.getElementById("language").selectedIndex = 0;
     document.getElementById("results").classList.add("hidden");
+    document.getElementById("transliteration-section").classList.add("hidden");
     
     ["transliterated", "pin4", "pin6", "alphaPin"].forEach(id => {
         document.getElementById(id).textContent = "";

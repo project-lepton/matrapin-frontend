@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -34,7 +35,7 @@
             <p class="tagline">Secure PINs from the Heart of Indian Languages.</p>
         </div>
         <div class="input-section">
-            <input type="text" id="wordInput" placeholder="Enter a word (in English)">
+            <input type="text" id="wordInput" placeholder="Enter word (in English/your language)">
             <select id="language">
                 <option value="none">Select Language</option>
                 <option value="odia">Odia</option>
@@ -44,42 +45,48 @@
             </select>
             <button onclick="generatePIN()" class="generate-btn">Generate Secure PIN</button>
         </div>
+
+        <div id="transliteration-section" class="hidden transliteration-box">
+            <span id="transliterated"></span>
+        </div>
+
         <div id="results" class="hidden results-section">
             <div class="result-card">
                 <h3>Your Secure PINs</h3>
                 <div class="pin-detail">
-                    <label>Transliterated:</label>
-                    <div class="copy-container">
-                        <span id="transliterated"></span>
-                        <button onclick="copyText('transliterated')" class="copy-btn">📋</button>
-                    </div>
-                </div>
-                <div class="pin-detail">
                     <label>4-Digit PIN:</label>
                     <div class="copy-container">
                         <span id="pin4"></span>
-                        <button onclick="copyText('pin4')" class="copy-btn">📋</button>
+                        <button onclick="copyText('pin4')" class="copy-btn">
+                            <i class="fa-light fa-copy"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="pin-detail">
                     <label>6-Digit PIN:</label>
                     <div class="copy-container">
                         <span id="pin6"></span>
-                        <button onclick="copyText('pin6')" class="copy-btn">📋</button>
+                        <button onclick="copyText('pin6')" class="copy-btn">
+                            <i class="fa-light fa-copy"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="pin-detail">
                     <label>Alphanumeric PIN:</label>
                     <div class="copy-container">
                         <span id="alphaPin"></span>
-                        <button onclick="copyText('alphaPin')" class="copy-btn">📋</button>
+                        <button onclick="copyText('alphaPin')" class="copy-btn">
+                            <i class="fa-light fa-copy"></i>
+                        </button>
                     </div>
                 </div>
             </div>
             <button onclick="resetForm()" class="reset-btn">Generate Another PIN</button>
         </div>
         <div class="info-section">
-            <p>With MatraPin, your PIN is both easy to remember and incredibly secure.</p>
+            <p>Made with <i class="fa-light fa-heart"></i> by 
+                <a href="https://rudraprsd.github.io/" target="_blank" rel="noopener noreferrer">Rudra</a> & 
+                <a href="https://suraj-k-panigrahi.netlify.app/" target="_blank" rel="noopener noreferrer">Suraj</a></p>
         </div>
     </div>
     <script src="script.js"></script>
