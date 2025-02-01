@@ -129,3 +129,27 @@ body {
 .hidden {
     display: none;
 }
+
+@font-face {
+    font-family: 'OdiaFont1';
+    src: url('./fonts/odia1.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TeluguFont1';
+    src: url('./fonts/telugu1.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TamilFont1';
+    src: url('./fonts/tamil1.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MalayalamFont1';
+    src: url('./fonts/malayalam1.ttf') format('truetype');
+    font-display: swap;
+}
