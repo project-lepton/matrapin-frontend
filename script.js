@@ -46,7 +46,7 @@ function addStructuredData(input, language, data) {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "matrapin",
-        "description": "Your Words, Your Security. MatraPin: Secure PINs from the Heart of Indian Languages.",
+        "description": "Transform your passwords into unbreakable PINs using the cultural richness of Indian scripts. MatraPIN offers secure, memorable PINs in Odia, Telugu, Tamil, and Malayalam - with zero data storage.",
         "applicationCategory": "PIN and Password Generator",
         "operatingSystem": "All",
         "offers": {
