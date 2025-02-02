@@ -12,6 +12,11 @@ async function generatePIN() {
         return;
     }
 
+    // Show loading state
+    document.getElementById("loading-section").classList.remove("hidden");
+    document.getElementById("results").classList.add("hidden");
+    document.getElementById("transliteration-section").classList.add("hidden");
+
     try {
         let response = await fetch("https://matrapin-backend.onrender.com/generate", {
             method: "POST",
@@ -20,6 +25,10 @@ async function generatePIN() {
         });
 
         let data = await response.json();
+
+        // Hide loading state
+        document.getElementById("loading-section").classList.add("hidden");
+
         document.getElementById("transliterated").textContent = data.transliterated_text;
         applyFont(language);
         document.getElementById("transliteration-section").classList.remove("hidden");
