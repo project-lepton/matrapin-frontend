@@ -140,9 +140,22 @@ body {
     display: none;
 }
 
+/* For new langauge, enter here: */
 @font-face {
     font-family: 'OdiaFont1';
     src: url('./fonts/odia1.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BengaliFont1';
+    src: url('./fonts/bengali1.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DevanagariFont1';
+    src: url('./fonts/devanagari1.ttf') format('truetype');
     font-display: swap;
 }
 

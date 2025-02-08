@@ -67,11 +67,14 @@ function addStructuredData(input, language, data) {
     document.head.appendChild(script);
 }
 
+// For new language, enter here:
 function applyFont(language) {
     let textElement = document.getElementById("transliterated");
 
     const fontMapping = {
         "odia": "OdiaFont1",
+        "bengali": "BengaliFont1",
+        "devanagari": "DevanagariFont1",
         "telugu": "TeluguFont1",
         "tamil": "TamilFont1",
         "malayalam": "MalayalamFont1"
